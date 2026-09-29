@@ -1,0 +1,26 @@
+[project]
+name = "create-mcp-server"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "asmay09", email = "137874375+asmay09@users.noreply.github.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "fastmcp>=2.3.0rc1",
+    "langchain>=1.4.2",
+    "langchain-mcp-adapters>=0.3.1",
+    "mcp>=1.24.0,<2.0.0",
+    "uvicorn>=0.54.0",
+]
+
+[project.scripts]
+mcp = "mcp:main"
+
+[build-system]
+requires = ["uv_build>=0.12.5,<0.13.0"]
+build-backend = "uv_build"
+
+[tool.uv]
+package = false
